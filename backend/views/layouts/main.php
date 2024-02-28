@@ -35,7 +35,14 @@ AppAsset::register($this);
         ],
     ]);
     $menuItems = [
-        ['label' => 'Home', 'url' => ['/site/index']],
+        ['label' => 'Домой', 'url' => ['/site/index']],
+        ['label' => 'Книги', 'url' => ['/book/index']],
+        ['label' => 'Сотрудники', 'url' => ['/employee/index']],
+        ['label' => 'Клиенты', 'url' => ['/client/index']],
+        ['label' => 'Операции', 'items'=>[
+            ['label' => 'Выдача', 'url' => ['/sale-book/index']],
+            ['label' => 'Возврат', 'url' => ['/return-book/index']],
+        ]],
     ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
